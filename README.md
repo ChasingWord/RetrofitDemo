@@ -1,7 +1,7 @@
 # RetrofitDemo
 A packaging for Retrofit2+RxJava2.
 
-androidbaseconfig include some base config for android app
-retrofit include all retrofit2+rxjava2 code
-app is the sample of retrofit in Android application
-Java test of retrofit in test/java/net/mapout/retrofit/ExampleUnitTest.java
+androidbaseconfig 包含Android项目的基础配置；
+retrofit 包含所有的 retrofit2+rxjava2 代码；
+app 为Android示例；
+Java 的测试示例在 test/java/net/mapout/retrofit/ExampleUnitTest.java
