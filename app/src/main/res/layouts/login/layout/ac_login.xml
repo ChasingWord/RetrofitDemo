@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/ll_login_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_47"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/width_32"
+                android:layout_height="@dimen/height_32"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:background="@mipmap/icon_user"/>
+
+            <EditText
+                android:id="@+id/et_account"
+                style="@style/login_edittext_style"
+                android:hint="please_input_account"
+                android:imeOptions="actionNext"
+                android:inputType="textVisiblePassword"
+                android:text="xs"
+                android:textColorHint="#6c6c6c"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/width_32"
+                android:layout_height="@dimen/height_32"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:background="@mipmap/icon_password"/>
+
+            <EditText
+                android:id="@+id/et_pwd"
+                style="@style/login_edittext_style"
+                android:hint="please_input_pwd"
+                android:inputType="textPassword"
+                android:textColorHint="#6c6c6c"
+                android:text="123456"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:layout_marginLeft="@dimen/margin_48"
+            android:layout_marginRight="@dimen/margin_48"
+            android:layout_marginTop="@dimen/margin_13"
+            android:text="login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/main_txt_size"/>
+
+    </LinearLayout>
+</RelativeLayout>

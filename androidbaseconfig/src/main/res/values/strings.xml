@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidBaseConfig</string>
+
+    <string name="loading">正在加载...</string>
+</resources>

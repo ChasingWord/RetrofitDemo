@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+def depend = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        versionCode androidVersionCode
+        versionName androidVersionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile depend['supportV7']
+    compile depend['recyclerView']
+    compile depend['rxlifecycle']
+    compile depend['rxlifecycleComponents']
+    compile depend['rxPermission']
+}
