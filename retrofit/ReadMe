@@ -1,0 +1,2 @@
+The IP in config.java is my own test service.
+You can test retrofit by java test(test/java/net/mapout/retrofit/ExampleUnitTest.java).
