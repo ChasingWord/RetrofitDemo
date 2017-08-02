@@ -1,4 +1,4 @@
-package net.mapout.androidbaseconfig;
+package net.chasing.androidbaseconfig;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

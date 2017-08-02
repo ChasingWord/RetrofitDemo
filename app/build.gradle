@@ -5,7 +5,7 @@ android {
     buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        applicationId "net.mapout.retrofitdemo"
+        applicationId "net.chasing.retrofitdemo"
         minSdkVersion androidMinSdkVersion
         targetSdkVersion androidTargetSdkVersion
         versionCode androidVersionCode

@@ -1,12 +1,12 @@
 <manifest
-    package="net.mapout.retrofitdemo"
+    package="net.chasing.retrofitdemo"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:name=".app.MyApplication"
+        android:name="net.chasing.retrofitdemo.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".view.login.LoginActivity"
+            android:name="net.chasing.retrofitdemo.view.login.LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".view.building.BuildingActivity"
+            android:name="net.chasing.retrofitdemo.view.building.BuildingActivity"
             android:screenOrientation="portrait"/>
     </application>
 

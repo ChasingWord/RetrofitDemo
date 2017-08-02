@@ -1,4 +1,4 @@
-package net.mapout.retrofitdemo;
+package net.chasing.retrofitdemo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

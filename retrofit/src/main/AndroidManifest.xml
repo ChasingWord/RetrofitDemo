@@ -1,4 +1,4 @@
-<manifest package="net.mapout.retrofit"
+<manifest package="net.chasing.retrofit"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
