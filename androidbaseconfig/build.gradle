@@ -28,4 +28,6 @@ dependencies {
     compile depend['rxlifecycle']
     compile depend['rxlifecycleComponents']
     compile depend['rxPermission']
+    compile depend['butterKnife']
+    compile depend['butterKnifeCompiler']
 }

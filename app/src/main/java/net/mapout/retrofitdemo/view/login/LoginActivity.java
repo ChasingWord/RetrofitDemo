@@ -9,12 +9,19 @@ import net.mapout.retrofitdemo.R;
 import net.mapout.retrofitdemo.view.login.present.LoginPresent;
 import net.mapout.retrofitdemo.view.login.view.LoginView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Chasing on 2017/6/13.
  */
 public class LoginActivity extends BaseActivity implements LoginView {
+    @BindView(R.id.btn_login)
     private Button login;
-    private EditText user, pwd;
+    @BindView(R.id.et_account)
+    EditText user;
+    @BindView(R.id.et_pwd)
+    EditText pwd;
 
     private LoginPresent mLoginPresent;
 
@@ -25,6 +32,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     protected void initInjector() {
+        ButterKnife.bind(this);
         mLoginPresent = new LoginPresent(this);
         basePresent = mLoginPresent;
     }
@@ -36,9 +44,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     protected void initView() {
-        login = (Button) findViewById(R.id.btn_login);
-        user = (EditText) findViewById(R.id.et_account);
-        pwd = (EditText) findViewById(R.id.et_pwd);
+
     }
 
     @Override

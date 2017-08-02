@@ -109,6 +109,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
             if (toast != null)
                 toast.cancel();
         }
+        toasts.clear();
     }
 
     @Override

@@ -14,10 +14,14 @@ import com.trello.rxlifecycle2.components.RxFragment;
 
 import net.mapout.androidbaseconfig.widget.dialog.ProgressDialog;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public abstract class BaseFragment extends RxFragment implements BaseView{
     protected BasePresent basePresent;
     protected ProgressDialog dialog;
+    private List<Toast> toasts = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -55,6 +59,11 @@ public abstract class BaseFragment extends RxFragment implements BaseView{
     @Override
     public void onStop() {
         super.onStop();
+        for (Toast toast : toasts) {
+            if (toast != null)
+                toast.cancel();
+        }
+        toasts.clear();
     }
 
     @Override
@@ -91,7 +100,9 @@ public abstract class BaseFragment extends RxFragment implements BaseView{
         if (getContext() == null) {
             return;
         }
-        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT);
+        toasts.add(toast);
+        toast.show();
     }
 
     @Override

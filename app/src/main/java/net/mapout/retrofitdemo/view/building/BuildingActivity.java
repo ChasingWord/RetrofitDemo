@@ -15,6 +15,8 @@ import net.mapout.retrofitdemo.R;
 import net.mapout.retrofitdemo.view.building.present.BuildingPresent;
 import net.mapout.retrofitdemo.view.building.view.BuildingView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -23,7 +25,8 @@ import io.reactivex.functions.Consumer;
 public class BuildingActivity extends BaseActivity implements BuildingView {
     private BuildingPresent mBuildingPresent;
 
-    private RecyclerView mRcvBuilding;
+    @BindView(R.id.rcv_building)
+    RecyclerView mRcvBuilding;
 
     @Override
     protected int setContentView() {
@@ -32,6 +35,7 @@ public class BuildingActivity extends BaseActivity implements BuildingView {
 
     @Override
     protected void initInjector() {
+        ButterKnife.bind(this);
         mBuildingPresent = new BuildingPresent(this);
         basePresent = mBuildingPresent;
     }
@@ -47,7 +51,6 @@ public class BuildingActivity extends BaseActivity implements BuildingView {
     }
 
     private void initRcv() {
-        mRcvBuilding = (RecyclerView) findViewById(R.id.rcv_building);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         mRcvBuilding.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this).color(R.color.divider_line).build());
