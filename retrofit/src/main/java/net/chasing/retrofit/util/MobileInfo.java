@@ -102,7 +102,8 @@ public class MobileInfo {
 			byte[] publicKey = md.digest(c.getEncoded());
 			secureCode = byte2HexFormatted(publicKey) + secureCode;
 		} catch ( Exception e ) {
-			secureCode = "49:F1:9D:6B:C0:2A:43:5F:0F:08:95:E0:22:B4:0A:1B:4A:57:47:90"+secureCode;
+			// TODO: 2018/3/30  填入应用对应的MD5码
+			secureCode = "...."+secureCode;
 			e.printStackTrace();
 		}
 		return secureCode;
