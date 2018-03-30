@@ -1,2 +1,4 @@
 这里使用的bean、api等为自己测试使用的样例，
 使用时替换api、bean及编写相应的engine
+在测试文件ExampleUnitTest内进行retrofit测试
+在测试文件RxjavaTest内进行rxjava测试
